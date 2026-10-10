@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | ZENTRA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="nav-container">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            <span>ZENTRA</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="airtime.html">Airtime</a>
+            <a href="bills.html">Bills</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="profile.html" class="active">Profile</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container page-content profile-page">
+
+    <section class="profile-heading">
+        <p class="eyebrow">YOUR ACCOUNT</p>
+        <h1>Profile settings</h1>
+        <p>Manage your personal details and preferences.</p>
+    </section>
+
+    <section class="profile-card">
+        <div class="profile-avatar">JD</div>
+
+        <div class="profile-user-info">
+            <h2>John Doe</h2>
+            <p>john.doe@example.com</p>
+            <span class="profile-status">● Demo account</span>
+        </div>
+
+        <button class="btn btn-outline" id="editProfileBtn" type="button">
+            Edit profile
+        </button>
+    </section>
+
+    <div class="profile-grid">
+
+        <section class="profile-panel">
+            <div class="panel-heading">
+                <h2>Personal information</h2>
+                <p>Your demo account details</p>
+            </div>
+
+            <div class="profile-detail">
+                <span>Full name</span>
+                <strong>John Doe</strong>
+            </div>
+
+            <div class="profile-detail">
+                <span>Email address</span>
+                <strong>john.doe@example.com</strong>
+            </div>
+
+            <div class="profile-detail">
+                <span>Phone number</span>
+                <strong>080 1234 5678</strong>
+            </div>
+
+            <div class="profile-detail">
+                <span>Account type</span>
+                <strong>Personal demo</strong>
+            </div>
+        </section>
+
+        <section class="profile-panel">
+            <div class="panel-heading">
+                <h2>Account information</h2>
+                <p>Sample account details</p>
+            </div>
+
+            <div class="profile-detail">
+                <span>Account number</span>
+                <strong>0001234567</strong>
+            </div>
+
+            <div class="profile-detail">
+                <span>Bank name</span>
+                <strong>ZENTRA Demo Bank</strong>
+            </div>
+
+            <div class="profile-detail">
+                <span>Account status</span>
+                <strong class="status-text">Demo active</strong>
+            </div>
+
+            <p class="demo-notice">
+                This is a portfolio demo. These details are fictional.
+            </p>
+        </section>
+
+        <section class="profile-panel">
+            <div class="panel-heading">
+                <h2>Preferences</h2>
+                <p>Customize your experience</p>
+            </div>
+
+            <label class="setting-row">
+                <span>
+                    <strong>Email notifications</strong>
+                    <small>Receive account updates</small>
+                </span>
+                <input type="checkbox" id="emailNotifications" checked>
+            </label>
+
+            <label class="setting-row">
+                <span>
+                    <strong>Transaction alerts</strong>
+                    <small>Show demo transaction alerts</small>
+                </span>
+                <input type="checkbox" id="transactionAlerts" checked>
+            </label>
+
+            <label class="setting-row">
+                <span>
+                    <strong>Promotional updates</strong>
+                    <small>See offers and announcements</small>
+                </span>
+                <input type="checkbox" id="promotionalUpdates">
+            </label>
+
+            <button class="btn btn-primary profile-save-btn"
+                    id="savePreferencesBtn" type="button">
+                Save preferences
+            </button>
+        </section>
+
+        <section class="profile-panel">
+            <div class="panel-heading">
+                <h2>Security</h2>
+                <p>Demo security options</p>
+            </div>
+
+            <div class="security-item">
+                <div class="security-icon">🔒</div>
+                <div>
+                    <strong>Password</strong>
+                    <small>Manage your demo password settings</small>
+                </div>
+            </div>
+
+            <div class="security-item">
+                <div class="security-icon">🛡️</div>
+                <div>
+                    <strong>Two-factor authentication</strong>
+                    <small>Not connected in this demo</small>
+                </div>
+            </div>
+
+            <button class="btn btn-outline profile-logout"
+                    id="demoLogoutBtn" type="button">
+                Sign out (demo)
+            </button>
+        </section>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <p>© <span id="year"></span> ZENTRA. Demo project for learning.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+</body>
+</html>

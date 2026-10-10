@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Airtime | ZENTRA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="airtime.html" class="active">Airtime</a>
+            <a href="bills.html">Bills</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="container page-content">
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="text-link">QUICK RECHARGE</p>
+            <h1>Stay connected.<br><span>Recharge instantly.</span></h1>
+            <p>
+                Choose a network, enter a phone number and select an amount.
+                This is a frontend demo, not a real airtime service.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section airtime-layout">
+
+        <div class="airtime-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Buy airtime</h2>
+                    <p>Complete the details below.</p>
+                </div>
+                <div class="airtime-heading-icon">📱</div>
+            </div>
+
+            <form id="airtimeForm" data-demo-form>
+
+                <label class="field-label">Choose network</label>
+
+                <div class="network-grid">
+
+                    <label class="network-option">
+                        <input type="radio" name="network"
+                               value="MTN" required>
+                        <span class="network-logo mtn-logo">MTN</span>
+                        <span class="network-name">MTN</span>
+                    </label>
+
+                    <label class="network-option">
+                        <input type="radio" name="network"
+                               value="Airtel">
+                        <span class="network-logo airtel-logo">A</span>
+                        <span class="network-name">Airtel</span>
+                    </label>
+
+                    <label class="network-option">
+                        <input type="radio" name="network"
+                               value="Glo">
+                        <span class="network-logo glo-logo">Glo</span>
+                        <span class="network-name">Glo</span>
+                    </label>
+
+                    <label class="network-option">
+                        <input type="radio" name="network"
+                               value="9mobile">
+                        <span class="network-logo mobile9-logo">9</span>
+                        <span class="network-name">9mobile</span>
+                    </label>
+
+                </div>
+
+
+                <label for="airtimePhone" class="field-label">
+                    Phone number
+                </label>
+
+                <div class="phone-input">
+                    <span>🇳🇬 +234</span>
+                    <input
+                        type="tel"
+                        id="airtimePhone"
+                        name="phone"
+                        inputmode="numeric"
+                        pattern="(0[0-9]{10}|[0-9]{10})"
+                        maxlength="11"
+                        placeholder="08012345678"
+                        required
+                    >
+                </div>
+
+                <label class="field-label">Choose amount</label>
+
+                <div class="amount-grid">
+                    <button type="button" class="amount-option"
+                            data-amount="100">₦100</button>
+                    <button type="button" class="amount-option"
+                            data-amount="200">₦200</button>
+                    <button type="button" class="amount-option"
+                            data-amount="500">₦500</button>
+                    <button type="button" class="amount-option"
+                            data-amount="1000">₦1,000</button>
+                    <button type="button" class="amount-option"
+                            data-amount="2000">₦2,000</button>
+                    <button type="button" class="amount-option"
+                            data-amount="5000">₦5,000</button>
+                </div>
+
+                <label for="airtimeAmount" class="field-label">
+                    Or enter another amount (₦)
+                </label>
+
+                <input
+                    type="number"
+                    id="airtimeAmount"
+                    name="amount"
+                    min="50"
+                    max="50000"
+                    step="50"
+                    placeholder="Enter amount"
+                    required
+                >
+
+                <div class="airtime-summary">
+                    <span>Recharge amount</span>
+                    <strong id="airtimeSummary">₦0.00</strong>
+                </div>
+
+                <div class="demo-warning">
+                    <strong>Demo purchase only</strong>
+                    <p>
+                        No airtime will be purchased and no money will
+                        be deducted from an account.
+                    </p>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-btn">
+                    Continue <span>→</span>
+                </button>
+
+            </form>
+        </div>
+
+
+        <aside class="airtime-sidebar">
+
+            <div class="airtime-promo">
+                <div class="promo-orbit"></div>
+                <span class="promo-tag">ZENTRA QUICK PAY</span>
+                <h2>Your recharge,<br>your way.</h2>
+                <p>
+                    A simple interface designed to make everyday
+                    top-ups easy to navigate.
+                </p>
+                <div class="promo-phone">📲</div>
+            </div>
+
+            <div class="security-card">
+                <div class="security-icon">⚡</div>
+                <h3>Simple checkout</h3>
+                <p>
+                    Select your network and amount without navigating
+                    through complicated screens.
+                </p>
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+        <p>© <span data-current-year></span> ZENTRA. Demo project only.</p>
+    </div>
+</footer>
+
+</body>
+</html>

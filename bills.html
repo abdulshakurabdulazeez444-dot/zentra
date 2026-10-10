@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payments | ZENTRA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container nav-container">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="airtime.html">Airtime</a>
+            <a href="bills.html" class="active">Bills</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container page-content">
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="text-link">ZENTRA BILL CENTRE</p>
+            <h1>Pay your bills.<br><span>Stay in control.</span></h1>
+            <p>
+                Explore a simple dashboard for electricity, television,
+                internet and other everyday bill-payment services.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <h2>What would you like to pay?</h2>
+                <p>Choose a service to open its demo payment form.</p>
+            </div>
+        </div>
+
+        <div class="bill-services">
+
+            <button class="bill-service"
+                    type="button"
+                    data-bill="Electricity">
+                <span class="bill-icon electricity-icon">⚡</span>
+                <span class="bill-text">
+                    <strong>Electricity</strong>
+                    <small>Pay power bills</small>
+                </span>
+                <span class="bill-arrow">→</span>
+            </button>
+
+            <button class="bill-service"
+                    type="button"
+                    data-bill="Television">
+                <span class="bill-icon television-icon">📺</span>
+                <span class="bill-text">
+                    <strong>TV subscription</strong>
+                    <small>Renew TV plans</small>
+                </span>
+                <span class="bill-arrow">→</span>
+            </button>
+
+            <button class="bill-service"
+                    type="button"
+                    data-bill="Internet">
+                <span class="bill-icon internet-icon">🌐</span>
+                <span class="bill-text">
+                    <strong>Internet</strong>
+                    <small>Pay internet bills</small>
+                </span>
+                <span class="bill-arrow">→</span>
+            </button>
+
+            <button class="bill-service"
+                    type="button"
+                    data-bill="Education">
+                <span class="bill-icon education-icon">🎓</span>
+                <span class="bill-text">
+                    <strong>Education</strong>
+                    <small>School payment demo</small>
+                </span>
+                <span class="bill-arrow">→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="section bill-payment-section" id="billPayment">
+
+        <div class="section-heading">
+            <div>
+                <h2 id="billFormTitle">Make a bill payment</h2>
+                <p id="billFormDescription">
+                    Select a service above to begin.
+                </p>
+            </div>
+        </div>
+
+        <div class="bill-form-card">
+
+            <div class="bill-form-heading">
+                <span class="bill-icon electricity-icon" id="selectedBillIcon">
+                    ⚡
+                </span>
+                <div>
+                    <h3 id="selectedBillName">Choose a service</h3>
+                    <p>Demo payment details</p>
+                </div>
+            </div>
+
+            <form id="billForm" data-demo-form>
+
+                <input type="hidden" id="billType" name="billType">
+
+                <label for="billProvider">Provider</label>
+                <select id="billProvider" name="provider" required>
+                    <option value="">Select a provider</option>
+                </select>
+
+                <label for="billCustomer">Customer or account number</label>
+                <input
+                    type="text"
+                    id="billCustomer"
+                    name="customer"
+                    placeholder="Enter demo customer number"
+                    minlength="4"
+                    maxlength="30"
+                    required
+                >
+
+                <label for="billAmount">Amount (₦)</label>
+                <input
+                    type="number"
+                    id="billAmount"
+                    name="amount"
+                    min="50"
+                    max="500000"
+                    step="50"
+                    placeholder="Enter amount"
+                    required
+                >
+
+                <div class="demo-warning">
+                    <strong>Demo payment only</strong>
+                    <p>
+                        No provider is contacted. No subscription is renewed,
+                        and no money is collected.
+                    </p>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-btn">
+                    Preview bill payment →
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+        <div class="bill-info-banner">
+            <div class="bill-info-icon">💡</div>
+            <div>
+                <h3>Keep your payments organised</h3>
+                <p>
+                    This demo shows how a fintech app can organise common
+                    services in one convenient place.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+        <p>© <span data-current-year></span> ZENTRA. Demo project only.</p>
+    </div>
+</footer>
+
+</body>
+</html>

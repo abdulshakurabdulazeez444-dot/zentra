@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZENTRA demo money transfer page">
+    <title>Transfer | ZENTRA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="transfer.html" class="active">Transfer</a>
+            <a href="airtime.html">Airtime</a>
+            <a href="bills.html">Bills</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="container page-content">
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="text-link">ZENTRA PAYMENTS</p>
+            <h1>Send money.<br><span>Move freely.</span></h1>
+            <p>
+                A simple, secure-looking demo transfer experience
+                designed for your ZENTRA fintech project.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <h2>Transfer money</h2>
+                <p>Enter the details below to preview a transfer.</p>
+            </div>
+        </div>
+
+        <div class="transfer-layout">
+
+            <div class="transfer-form-card">
+
+                <div class="transfer-step">
+                    <span class="step-number">1</span>
+                    <div>
+                        <h3>Recipient details</h3>
+                        <p>Who are you sending money to?</p>
+                    </div>
+                </div>
+
+                <form id="transferForm" data-demo-form>
+
+                    <label for="recipient">Recipient's full name</label>
+                    <input
+                        type="text"
+                        id="recipient"
+                        name="recipient"
+                        placeholder="Enter recipient's name"
+                        required
+                    >
+
+                    <label for="bank">Select bank</label>
+                    <select id="bank" name="bank" required>
+                        <option value="">Choose a bank</option>
+                        <option value="Demo Bank">Demo Bank</option>
+                        <option value="Sample Microfinance Bank">
+                            Sample Microfinance Bank
+                        </option>
+                        <option value="ZENTRA Demo Bank">
+                            ZENTRA Demo Bank
+                        </option>
+                    </select>
+
+                    <label for="accountNumber">Account number</label>
+                    <input
+                        type="text"
+                        id="accountNumber"
+                        name="accountNumber"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        placeholder="10-digit demo account number"
+                        required
+                    >
+
+                    <div class="transfer-step second-step">
+                        <span class="step-number">2</span>
+                        <div>
+                            <h3>Transfer amount</h3>
+                            <p>How much would you like to send?</p>
+                        </div>
+                    </div>
+
+                    <label for="amount">Amount (₦)</label>
+                    <input
+                        type="number"
+                        id="amount"
+                        name="amount"
+                        min="1"
+                        max="245800"
+                        step="1"
+                        placeholder="₦ 0.00"
+                        required
+                    >
+
+                    <label for="narration">Payment description (optional)</label>
+                    <input
+                        type="text"
+                        id="narration"
+                        name="narration"
+                        maxlength="100"
+                        placeholder="e.g. Lunch payment"
+                    >
+
+                    <div class="demo-warning">
+                        <strong>Demo mode</strong>
+                        <p>
+                            This form does not contact a bank or transfer
+                            money. Use fictional account details only.
+                        </p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-btn">
+                        Preview transfer <span>→</span>
+                    </button>
+
+                </form>
+            </div>
+
+
+            <aside class="transfer-side">
+
+                <div class="mini-balance-card">
+                    <p>Demo available balance</p>
+                    <h2>₦245,800.00</h2>
+                    <span>● Demo account</span>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">🛡️</div>
+                    <h3>Transfer with confidence</h3>
+                    <p>
+                        Always verify recipient details before making a
+                        real transfer. This project is only a frontend demo.
+                    </p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">↗</div>
+                    <h3>Fast and simple</h3>
+                    <p>
+                        A clean transfer interface with a responsive layout
+                        for phones, tablets and desktop screens.
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+        <p>© <span data-current-year></span> ZENTRA. Demo project only.</p>
+    </div>
+</footer>
+
+</body>
+</html>

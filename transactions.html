@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions | ZENTRA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container nav-container">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="airtime.html">Airtime</a>
+            <a href="bills.html">Bills</a>
+            <a href="transactions.html" class="active">Transactions</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container page-content">
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="text-link">YOUR ACTIVITY</p>
+            <h1>Every transaction.<br><span>All in one place.</span></h1>
+            <p>
+                View and filter sample transactions in your ZENTRA
+                demo account.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Transaction overview</h2>
+                <p>Sample figures for demonstration purposes.</p>
+            </div>
+        </div>
+
+        <div class="transaction-stats">
+
+            <article class="transaction-stat-card">
+                <span class="transaction-stat-icon">↙</span>
+                <p>Total money received</p>
+                <h3>₦320,000.00</h3>
+                <small>Demo income</small>
+            </article>
+
+            <article class="transaction-stat-card">
+                <span class="transaction-stat-icon expense-icon">↗</span>
+                <p>Total money spent</p>
+                <h3>₦74,200.00</h3>
+                <small>Demo expenses</small>
+            </article>
+
+            <article class="transaction-stat-card">
+                <span class="transaction-stat-icon">⇄</span>
+                <p>Total transactions</p>
+                <h3>08</h3>
+                <small>Sample records</small>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Transaction history</h2>
+                <p>Search and filter your activity below.</p>
+            </div>
+        </div>
+
+        <div class="history-card">
+
+            <div class="history-controls">
+
+                <div class="history-row">
+                    <span>⌕</span>
+                    <input
+                        type="search"
+                        id="transactionSearch"
+                        placeholder="Search transactions..."
+                        aria-label="Search transactions"
+                    >
+                </div>
+
+                <select id="transactionFilter"
+                        aria-label="Filter transaction type">
+                    <option value="all">All transactions</option>
+                    <option value="income">Money received</option>
+                    <option value="expense">Money spent</option>
+                </select>
+
+            </div>
+
+
+            <div class="history-heading">
+                <h3>Recent activity</h3>
+                <span id="transactionCount">8 records</span>
+            </div>
+
+
+            <div class="history-list" id="historyList">
+
+                <article class="history-row"
+                         data-type="income"
+                         data-search="salary payment monthly income">
+                    <div class="history-icon income-bg">↓</div>
+                    <div class="history-details">
+                        <h4>Salary payment</h4>
+                        <p>Today · 09:30 AM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong class="income-text">+₦250,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="expense"
+                         data-search="airtime recharge phone mtn">
+                    <div class="history-icon airtime-bg">▣</div>
+                    <div class="history-details">
+                        <h4>Airtime recharge</h4>
+                        <p>Today · 08:15 AM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong>-₦2,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="expense"
+                         data-search="electricity bill power">
+                    <div class="history-icon electricity-bg">⚡</div>
+                    <div class="history-details">
+                        <h4>Electricity bill</h4>
+                        <p>Yesterday · 04:20 PM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong>-₦15,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="expense"
+                         data-search="transfer chidi bank payment">
+                    <div class="history-icon transfer-bg">↗</div>
+                    <div class="history-details">
+                        <h4>Transfer to baki</h4>
+                        <p>Yesterday · 11:42 AM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong>-₦25,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="income"
+                         data-search="refund returned payment">
+                    <div class="history-icon income-bg">↓</div>
+                    <div class="history-details">
+                        <h4>Refund received</h4>
+                        <p>08 Oct · 02:15 PM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong class="income-text">+₦20,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="expense"
+                         data-search="internet data subscription">
+                    <div class="history-icon internet-bg">◎</div>
+                    <div class="history-details">
+                        <h4>Internet subscription</h4>
+                        <p>08 Oct · 10:10 AM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong>-₦5,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="expense"
+                         data-search="television tv subscription">
+                    <div class="history-icon tv-bg">▣</div>
+                    <div class="history-details">
+                        <h4>TV subscription</h4>
+                        <p>07 Oct · 01:35 PM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong>-₦8,200.00</strong>
+                        <span class="status pending">Pending</span>
+                    </div>
+                </article>
+
+                <article class="history-row"
+                         data-type="income"
+                         data-search="gift transfer received">
+                    <div class="history-icon income-bg">↓</div>
+                    <div class="history-details">
+                        <h4>Money received</h4>
+                        <p>06 Oct · 09:05 AM</p>
+                    </div>
+                    <div class="history-value">
+                        <strong class="income-text">+₦50,000.00</strong>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="history-empty" id="historyEmpty" hidden>
+                <span>🔎</span>
+                <h3>No transactions found</h3>
+                <p>Try another search or filter.</p>
+            </div>
+
+            <p class="history-demo-note">
+                These are fictional sample records, not real account activity.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">Z</span>
+            ZENTRA
+        </a>
+        <p>© <span data-current-year></span> ZENTRA. Demo project only.</p>
+    </div>
+</footer>
+
+</body>
+</html>
